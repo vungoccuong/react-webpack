@@ -1,0 +1,21 @@
+/*!
+ * Copyright (c) 2019.
+ * Project: email-verifier-website.
+ * Author: hirosume.
+ */
+
+.gin-nav {
+  height: 66px;
+  background-color: #bdc3c7;
+
+  > div.ant-row {
+    line-height: 66px;
+    vertical-align: middle;
+
+    .ant-col {
+      &:first-child {
+        padding-left: 10px;
+      }
+    }
+  }
+}
