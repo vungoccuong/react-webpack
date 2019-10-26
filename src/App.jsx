@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/">
+        <Route path="/" exact>
           <Main/>
         </Route>
       </Switch>

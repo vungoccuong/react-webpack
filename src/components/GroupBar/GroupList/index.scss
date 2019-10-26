@@ -1,0 +1,25 @@
+/*!
+ * Copyright (c) 2019.
+ * Project: email-verifier-website.
+ * Author: hirosume.
+ */
+
+.gin-group-list {
+  margin-top: 35px;
+
+  .gin-group {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+
+    > .name {
+      font-size: 18px;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    > .total {
+      font-size: 15px;
+    }
+  }
+}

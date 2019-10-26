@@ -1,8 +1,17 @@
+/*
+ * Copyright (c) 2019.
+ * Project: email-verifier-website.
+ * Author: hirosume.
+ */
+
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+
 module.exports = {
     mode: process.env.NODE_ENV || 'development',
+  entry: {
     entry: path.join(__dirname, 'src', 'index.js'),
+  },
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'index.bundle.js',
