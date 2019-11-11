@@ -9,15 +9,19 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 module.exports = {
     mode: process.env.NODE_ENV || 'development',
-  entry: {
-    entry: path.join(__dirname, 'src', 'index.js'),
-  },
+    entry: {
+        entry: path.join(__dirname, 'src', 'index.js'),
+    },
     output: {
         path: path.join(__dirname, 'build'),
-        filename: 'index.bundle.js',
+        filename: '[name].[hash].bundle.js',
+        chunkFilename: '[name].[hash].chunk.js',
     },
     devServer: {
         contentBase: path.join(__dirname, 'src'),
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.tsx'],
     },
     module: {
         rules: [
