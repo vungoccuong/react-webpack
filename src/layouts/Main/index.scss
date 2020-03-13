@@ -4,11 +4,12 @@
  * Author: hirosume.
  */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .gin-main-layout {
-  height: calc(100vh - 66px);
+  background-color: #f4f3ef;
+  //height: calc(100vh - 66px);
 
   .container {
     margin: 0 350px;

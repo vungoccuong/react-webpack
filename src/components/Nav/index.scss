@@ -5,8 +5,10 @@
  */
 
 .gin-nav {
-  height: 66px;
-  background-color: #bdc3c7;
+  min-height: 53px;
+  background-color: initial !important;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 15px;
 
   > div.ant-row {
     line-height: 66px;

@@ -6,19 +6,23 @@
 
 import React from 'react';
 import './index.scss';
-import { Button, Col, Row } from 'antd';
+import { FluidContainer } from '../Custom';
+import Branch from './Branch';
+import { AntDesignOutlined } from '@ant-design/icons';
+import UserAvatar from './UserAvatar';
 
-function Nav(props) {
-  return (
-      <div className="gin-nav">
-          <Row>
-              <Col span={5}>
-                  <Button type="dashed">Email verifier</Button>
-              </Col>
-              <Col span={19}></Col>
-          </Row>
-      </div>
-  );
+function Nav() {
+    return (
+        <div className="gin-nav">
+            <FluidContainer>
+                <Branch as="a" href="#">
+                    <AntDesignOutlined />
+                    iNET Monitor Dashboard
+                </Branch>
+                <UserAvatar />
+            </FluidContainer>
+        </div>
+    );
 }
 
 export default Nav;
