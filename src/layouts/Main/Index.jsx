@@ -8,6 +8,7 @@ import React from 'react';
 import Nav from '../../components/Nav/Index.jsx';
 import { Col, Row } from 'antd';
 import './index.scss';
+import ServiceList from '../../components/ServiceList/ServiceList';
 
 function Main() {
     return (
@@ -15,8 +16,10 @@ function Main() {
             <Nav />
             <div className="container">
                 <Row>
-                    <Col span={6}></Col>
-                    <Col span={18}></Col>
+                    <Col span={6}>hihi</Col>
+                    <Col span={18}>
+                        <ServiceList />
+                    </Col>
                 </Row>
             </div>
         </div>

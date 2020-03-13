@@ -4,20 +4,26 @@
  * Author: hirosume.
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Main from './layouts/Main/Index.jsx';
+import { useDispatch } from 'react-redux';
+import { fetchUser } from './redux/slices/user';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact>
-          <Main/>
-        </Route>
-      </Switch>
-    </BrowserRouter>
-  );
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchUser());
+    }, [dispatch]);
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" exact>
+                    <Main />
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    );
 }
 
 export default App;

@@ -6,7 +6,21 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
-const el = document.getElementById('hirosume');
-el && ReactDOM.render(<App />, el);
+function render() {
+    const App = require('./App').default;
+    const el = document.getElementById('hirosume');
+    el &&
+        ReactDOM.render(
+            <Provider store={store}>
+                <App />
+            </Provider>,
+            el,
+        );
+}
+render();
+if (process.env.NODE_ENV === 'development' && module.hot) {
+    module.hot.accept('./App', render);
+}
