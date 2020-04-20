@@ -9,15 +9,16 @@ import Nav from '../../components/Nav/Index.jsx';
 import { Col, Row } from 'antd';
 import './index.scss';
 import ServiceList from '../../components/ServiceList/ServiceList';
+import SideBar from '../../components/Sidebar/Sidebar';
 
 function Main() {
     return (
         <div className="gin-main-layout">
             <Nav />
             <div className="container">
+                <SideBar />
                 <Row>
-                    <Col span={6}>hihi</Col>
-                    <Col span={18}>
+                    <Col offset={1} span={23}>
                         <ServiceList />
                     </Col>
                 </Row>
