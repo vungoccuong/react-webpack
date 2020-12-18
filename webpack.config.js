@@ -46,14 +46,16 @@ module.exports = {
                     {
                         loader: 'less-loader',
                         options: {
-                            javascriptEnabled: true,
+                            lessOptions: {
+                                javascriptEnabled: true,
+                            },
                         },
                     },
                 ],
             },
             {
                 test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-                loaders: ['file-loader'],
+                use: ['file-loader'],
             },
         ],
     },
