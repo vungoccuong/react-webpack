@@ -17,7 +17,7 @@ function Nav() {
             <FluidContainer>
                 <Branch as="a" href="#">
                     <AntDesignOutlined />
-                    iNET Monitor Dashboard
+                    Telegram Bot
                 </Branch>
                 <UserAvatar />
             </FluidContainer>
